@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/tailwind.min.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+  </head>
+  <body>
+    <header></header>
+    <div class="flex flex-row justify-between h-full">
+      <aside
+        class="sidebar-left flex-col flex items-center bg-white float-left sticky"
+      >
+        <div class="logo flex flex-row items-center justify-between">
+          <div class="logo__icon flex justify-center items-center">
+            <span class="logo__head-text text-white font-bold">O</span>
+          </div>
+          <span class="logo__name font-bold">Ohara</span>
+        </div>
+      </aside>
+      <main class="main float-left flex-1 h-full">
+        <section class="head-comp w-full flex justify-between items-center">
+          <div class="search bg-white">
+            <form class="flex flex-row">
+              <button
+                class="search__button border-none bg-transparent"
+                type="submit"
+              >
+                <i class="fas fa-search text-gray-500"></i>
+              </button>
+              <input
+                type="text"
+                placeholder="search"
+                class="search__input flex-1 bg-transparent outline-none pr-4"
+              />
+            </form>
+          </div>
+          <div class="notification">
+            <i class="far fa-bell text-gray-600"></i>
+          </div>
+        </section>
+        <section class="menu-comp w-full flex justify-between items-center">
+          <h1 class="menu__title">All courses</h1>
+          <ul class="menu__holder">
+            <li class="menu__item inline-block active"><span>Ongoing</span></li>
+            <li class="menu__item inline-block"><span>Favorite</span></li>
+            <li class="menu__item inline-block"><span>Complete</span></li>
+          </ul>
+        </section>
+        <section class="top-course w-full flex justify-between items-center">
+          <img class="top-course__img" src="./assets/images/course1.png" />
+        </section>
+        <section class="courses w-full grid  grid-cols-2">
+          <div class="course">
+            <img class="course__img" src="./assets/images/course1.png" />
+          </div>
+          <div class="course">
+            <img class="course__img" src="./assets/images/course1.png" />
+          </div>
+          <div class="course">
+            <img class="course__img" src="./assets/images/course1.png" />
+          </div>
+          <div class="course">
+            <img class="course__img" src="./assets/images/course1.png" />
+          </div>
+        </section>
+      </main>
+      <aside
+        class="sidebar-right flex-col flex items-center bg-white float-right sticky"
+      ></aside>
+      <div class="clear-both"></div>
+    </div>
+    <footer></footer>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
