@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Gilroy;
+  src: url(../fonts/Gilroy-Light.otf);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -11,136 +16,181 @@ html,
 body,
 .container {
   height: 100%;
-  background-color: #f5f5fb;
+  background-color: #e5e5e5;
+}
+
+.under-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #0d0d0d;
+}
+
+.upper-background {
+  position: absolute;
+  width: calc(100% - 96px);
+  height: calc(100%);
+  left: 48px;
+  top: -50%;
+  background: radial-gradient(
+    48.24% 36.4% at 50% 59.21%,
+    #5b5b5b 0%,
+    #0d0d0d 100%
+  );
+  opacity: 0.7;
+  filter: blur(40px);
+}
+
+.main-header {
+  width: 100%;
+  height: 100px;
 }
 
 .sidebar-left {
-  width: 272px;
-  height: 100%;
-  padding-top: 48px;
-  padding-bottom: 48px;
-}
-
-.logo {
-  width: 130px;
-}
-
-.logo__icon {
-  width: 48px;
-  height: 48px;
-  background-color: #5e81f4;
-  border-radius: 10px;
-  font-size: 1.6rem;
-}
-
-.logo__name {
-  color: #5e81f4;
-  font-size: 1.6rem;
+  width: 384px;
 }
 
 .sidebar-right {
   width: 384px;
+}
+
+.main-content {
+  width: 560px;
+  background-color: #6f1616;
+}
+
+.main-content .text {
+  font-family: Kanit;
+  letter-spacing: 36px;
+  font-weight: 600;
+  font-size: 72px;
+  color: #d4b0a2;
+  writing-mode: vertical-rl;
+  margin-left: 60px;
+  margin-top: 30px;
+}
+
+.main-container {
   height: 100%;
-  padding-top: 48px;
-  padding-bottom: 48px;
 }
 
-.main {
-  padding: 48px 40px;
-  overflow: auto;
+.header__logo,
+.header__brand {
+  width: 384px;
 }
 
-.search {
-  width: 472px;
-  height: 56px;
-  border-radius: 10px;
+.okami-container {
+  width: 560px;
+  background-color: #7a0101;
+  color: white;
 }
 
-.search__button {
-  width: 56px;
-  height: 56px;
+.full-name {
+  color: #bd8d7b;
+  font-size: 18px;
+  letter-spacing: 10px;
+  font-weight: bold;
+  font-family: Gilroy, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.search__input {
-  height: 56px;
+.okami-logo {
+  width: 36px;
+  height: 36px;
 }
 
-.notification i {
-  font-size: 1.4em;
-  transition: ease-out;
-  transition-duration: 0.5;
-  transition-property: all;
-}
-
-.notification i:hover {
-  color: black;
-}
-
-.menu-comp {
-  padding: 48px 0;
-}
-
-.menu__title {
-  font-size: 2rem;
-}
-
-.menu__item {
-  cursor: pointer;
-  user-select: none;
-  transition: all 0.2s ease-out;
-}
-
-.menu__item.active,
-.menu__item:hover {
-  color: #5e81f4;
-  position: relative;
-}
-
-.menu__item.active::after,
-.menu__item:hover::after {
-  content: "";
+.okami-logo .line {
   position: absolute;
-  bottom: -5px;
-  background-color: #5e81f4;
-  width: 2em;
-  height: 2px;
-  left: calc(50% - 1em);
+  width: 2.6px;
+  height: 30px;
+  background: #bd8d7b;
 }
 
-.menu__holder .menu__item {
-  margin-right: 40px;
+.okami-logo .line2 {
+  position: absolute;
+  width: 2.6px;
+  height: 21px;
+  left: 24px;
+  top: -1px;
+  background: #bd8d7b;
+  transform: rotate(45deg);
 }
 
-.menu__holder .menu__item:last-child {
-  margin-right: 0;
+.okami-logo .line3 {
+  position: absolute;
+  width: 2.6px;
+  height: 28px;
+  left: 26px;
+  top: 2px;
+  background: #bd8d7b;
+  transform: rotate(45deg);
 }
 
-.top-course {
-  border-radius: 10px;
-  overflow: hidden;
-  height: 360px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+.okami-logo .rect {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border: 2px solid #bd8d7b;
+  transform: rotate(45deg);
 }
 
-.courses {
-  grid-column-gap: 40px;
-  grid-row-gap: 40px;
-  grid-template-columns: auto auto;
-  margin-top: 40px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+.image-under {
+  mix-blend-mode: lighten;
+  background-image: url(../images/okami1.jpeg);
+  height: calc(100% - 100px);
+  width: 210%;
+  left: -57%;
+  background-size: cover;
+  bottom: 0;
 }
 
-.course {
-  height: 310px;
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.course__img {
-  width: 100%;
+.v-line-1 {
+  position: absolute;
+  top: 0;
+  left: 48px;
   height: 100%;
-  text-align: center;
-  object-fit: cover;
+  opacity: 0.1;
+  border-left: 1px solid #f2f2f2;
+}
+
+.v-line-2 {
+  position: absolute;
+  top: 0;
+  left: 384px;
+  height: 100%;
+  opacity: 0.1;
+  border-left: 1px solid #f2f2f2;
+}
+
+.v-line-3 {
+  position: absolute;
+  top: 0;
+  right: 48px;
+  height: 100%;
+  opacity: 0.1;
+  border-left: 1px solid #f2f2f2;
+}
+
+.v-line-4 {
+  position: absolute;
+  top: 0;
+  right: 384px;
+  height: 100%;
+  opacity: 0.1;
+  border-left: 1px solid #f2f2f2;
+}
+
+.h-line-1 {
+  position: absolute;
+  top: 240px;
+  width: 100%;
+  opacity: 0.1;
+  border-top: 1px solid #f2f2f2;
+}
+
+.h-line-2 {
+  position: absolute;
+  bottom: 180px;
+  width: 100%;
+  opacity: 0.1;
+  border-top: 1px solid #f2f2f2;
 }
